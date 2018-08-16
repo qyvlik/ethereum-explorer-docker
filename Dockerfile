@@ -11,6 +11,7 @@ WORKDIR /home/www
 
 RUN apk add git \
   && apk add python \
+  && rm -rf /var/cache/apk/* \
   && npm install -g --registry=https://registry.npm.taobao.org bower \
   && npm install -g --registry=https://registry.npm.taobao.org gulp \
   && wget "https://github.com/etherparty/explorer/archive/master.zip" \
