@@ -13,7 +13,7 @@ RUN npm install -g --registry=https://registry.npm.taobao.org bower \
 WORKDIR /home/www
 
 RUN cd /home/www \
-  && curl -SLO "https://github.com/etherparty/explorer/archive/master.zip" \
+  && wget "https://github.com/etherparty/explorer/archive/master.zip" \
   && unzip master.zip \
   && cd explorer-master \ 
   && npm install \
