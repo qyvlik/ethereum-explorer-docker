@@ -12,16 +12,16 @@ RUN npm install -g --registry=https://registry.npm.taobao.org bower \
 
 WORKDIR /home/www
 
-RUN cd /home/www \
+USER www
+
+RUN chonw -R www:www /home/www \
+  && cd /home/www \
   && wget "https://github.com/etherparty/explorer/archive/master.zip" \
   && unzip master.zip \
   && cd explorer-master \ 
   && npm install \
-  && bower install
+  && bower install --allow-root
 
-RUN chonw -R www:www /home/www
-
-USER www
 
 EXPOSE 8000
 
