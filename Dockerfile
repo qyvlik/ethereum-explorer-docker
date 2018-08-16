@@ -3,7 +3,7 @@ FROM library/alpine:latest
 MAINTAINER "qyvlik@qq.com"
 
 ENV NODE_VERSION 10.8.0
-ENV GETH_HOST 
+ENV GETH_HOST localhost
 
 # Switch to root user
 USER root
