@@ -7,22 +7,20 @@ ENV GETH_HOST localhost
 # Switch to root user
 USER root
 
-RUN npm install -g --registry=https://registry.npm.taobao.org bower \
-  && npm install -g --registry=https://registry.npm.taobao.org gulp 
-
-RUN adduser -D -u 1001 www www
-
-USER www
-
 WORKDIR /home/www
 
-RUN chown -R www:www /home/www \
+RUN apk add git \
+  && apk add python \
+  && npm install -g --registry=https://registry.npm.taobao.org bower \
+  && npm install -g --registry=https://registry.npm.taobao.org gulp \
   && wget "https://github.com/etherparty/explorer/archive/master.zip" \
   && unzip master.zip \
   && cd explorer-master \ 
   && npm install \
-  && bower install
+  && bower install \
+  && chown -R www:www /home/www
 
+USER www
 
 EXPOSE 8000
 
