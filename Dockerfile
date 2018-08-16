@@ -19,7 +19,7 @@ RUN apk add git \
   && cd explorer-master \ 
   && npm install \
   && bower install --allow-root \
-  && adduser -D -u 1000 www www \
+  && adduser -D -u 1001 www www \
   && chown -R www:www /home/www
 
 USER www
