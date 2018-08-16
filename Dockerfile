@@ -18,8 +18,9 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 WORKDIR /home/www
 
 RUN cd /home/www \
-  && curl -SLO "https://github.com/etherparty/explorer/archive/master.zip" 
-  && cd explorer \ 
+  && curl -SLO "https://github.com/etherparty/explorer/archive/master.zip" \
+  && unzip master.zip \
+  && cd explorer-master \ 
   && npm install \
   && bower install
 
