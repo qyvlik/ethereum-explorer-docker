@@ -16,7 +16,7 @@ USER www
 
 WORKDIR /home/www
 
-RUN chonw -R www:www /home/www \
+RUN chown -R www:www /home/www \
   && wget "https://github.com/etherparty/explorer/archive/master.zip" \
   && unzip master.zip \
   && cd explorer-master \ 
