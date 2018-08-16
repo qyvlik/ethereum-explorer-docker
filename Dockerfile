@@ -10,7 +10,7 @@ USER root
 RUN npm install -g --registry=https://registry.npm.taobao.org bower \
   && npm install -g --registry=https://registry.npm.taobao.org gulp 
 
-RUN adduser -D -u 1000 www www
+RUN adduser -D -u 1001 www www
 
 USER www
 
