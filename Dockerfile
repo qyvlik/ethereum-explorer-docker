@@ -18,7 +18,7 @@ RUN apk add git \
   && unzip master.zip \
   && cd explorer-master \ 
   && npm install \
-  && bower install \
+  && bower install --allow-root \
   && chown -R www:www /home/www
 
 USER www
