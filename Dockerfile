@@ -21,7 +21,7 @@ RUN chown -R www:www /home/www \
   && unzip master.zip \
   && cd explorer-master \ 
   && npm install \
-  && bower install --allow-root
+  && bower install
 
 
 EXPOSE 8000
