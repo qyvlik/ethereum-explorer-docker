@@ -2,7 +2,7 @@ FROM node:alpine
 
 MAINTAINER "qyvlik@qq.com"
 
-ENV GETH_HOST localhost
+ENV GETH_HOST localhost:8545
 
 # Switch to root user
 USER root
