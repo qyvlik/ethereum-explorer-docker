@@ -5,7 +5,7 @@ var net = require('net');
 var config = function () {
   
   this.logFormat = "combined";
-  var rpcHost = process.env["HOME"];
+  var rpcHost = process.env["GETH_HOST"];
   this.provider = new Web3(new Web3.providers.HttpProvider(rpcHost));
   
   this.bootstrapUrl = "https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css";
